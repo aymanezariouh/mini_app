@@ -11,8 +11,8 @@
             box-sizing: border-box;
         }
         body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a1a2e;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -20,57 +20,71 @@
             padding: 20px;
         }
         .form-container {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            max-width: 400px;
+            background: #16213e;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            max-width: 450px;
             width: 100%;
+            border: 2px solid #0f3460;
         }
         h1 {
-            margin-bottom: 20px;
-            color: #333;
+            margin-bottom: 30px;
+            color: #e94560;
+            text-align: center;
+            font-size: 2rem;
         }
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         label {
             display: block;
-            margin-bottom: 5px;
-            color: #555;
-            font-weight: bold;
+            margin-bottom: 8px;
+            color: #e94560;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
         }
         input {
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 14px;
+            padding: 14px;
+            border: 2px solid #0f3460;
+            border-radius: 10px;
+            font-size: 15px;
+            background: #0f3460;
+            color: white;
+            transition: border 0.3s;
         }
         input:focus {
             outline: none;
-            border-color: #4CAF50;
+            border-color: #e94560;
         }
         button {
             width: 100%;
-            padding: 12px;
-            background: #4CAF50;
+            padding: 15px;
+            background: linear-gradient(135deg, #e94560 0%, #c72c48 100%);
             color: white;
             border: none;
-            border-radius: 4px;
-            font-size: 16px;
+            border-radius: 10px;
+            font-size: 18px;
             cursor: pointer;
-            margin-top: 10px;
+            margin-top: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: transform 0.2s;
         }
         button:hover {
-            background: #45a049;
+            transform: scale(1.02);
         }
         .error {
-            background: #f44336;
+            background: #e94560;
             color: white;
-            padding: 10px;
-            border-radius: 4px;
-            margin-bottom: 15px;
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
         }
     </style>
 </head>

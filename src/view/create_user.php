@@ -12,45 +12,90 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: #f5f5f5;
-            padding: 2rem;
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 3rem;
+            min-height: 100vh;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
+        }
+
+        h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
 
         .card {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
         }
 
         .username {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #764ba2;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
         }
 
         .email {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
+            color: #555;
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+            font-style: italic;
         }
 
         .created-at {
-            color: #444;
-            line-height: 1.5;
+            color: #777;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            padding: 0.8rem 1.5rem;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #764ba2;
+        }
+
+        .add-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+        }
+
+        .add-btn button {
+            padding: 1.2rem 2rem;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
     </style>
 </head>
@@ -65,13 +110,13 @@
                     <div class="email"><?= htmlspecialchars($user['email']) ?></div>
                     <div class="created-at"><?= htmlspecialchars($user['created_at']) ?></div>
                     <form method="GET" action="/test/<?= $user['id'] ?>">
-    <button type="submit">Update</button>
-</form>
+                        <button type="submit">Update</button>
+                    </form>
                 </div>
             <?php endforeach; ?>
         </div>
     </div>
-    <form method="GET "action="/users/new">
+    <form method="GET" action="/users/new" class="add-btn">
         <button type="submit">GOO!!!</button>
     </form>
 </body>

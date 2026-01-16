@@ -9,13 +9,12 @@ use App\core\BaseModel;
 
 class user extends BaseModel
 {
-protected $username;
-protected $email;
-protected $password;
-protected $created_at;
+    protected $username;
+    protected $email;
+    protected $password;
+    protected $created_at;
 
-
- public function setUsername($u) { $this->username = $u; }
+    public function setUsername($u) { $this->username = $u; }
     public function getUsername() { return $this->username; }
 
     public function setEmail($e) { $this->email = $e; }
@@ -27,23 +26,13 @@ protected $created_at;
     public function setDate($date) { $this->created_at = $date; }
     public function getDate() { return $this->created_at; }
 
-protected function getTable(): string
-{
-    return 'users';
+    protected function getTable(): string
+    {
+        return 'users';
+    }
+
+    protected function getColumns(): array
+    {
+        return ['username', 'email', 'password'];
+    }
 }
-protected function getColumns(): array
-{
-    return ['username', 'email', 'password'];
-}
-protected function fill(){
-
-
-}
-}
-
-
-
-
-
-
-?>

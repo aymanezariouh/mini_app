@@ -73,11 +73,11 @@ class AuthController extends BaseController
         echo "<h1>Dashboard</h1>";
     }
 
-     public function index()
+    public function index()
     {
-        $this->view('create_user', [
-            'name' => 'Ali', //$name
-            'LastName' => 'joe' //$LastName
+        echo $this->render('create_user', [
+            'name' => 'Ali',
+            'LastName' => 'joe'
         ]);
     }
 }

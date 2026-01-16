@@ -9,8 +9,6 @@ use App\models\user;
 
 $router = Router::getRouter();
 
-/* ---------- ROUTES ---------- */
-
 $router->get('', fn() => 'Home');
 $router->get('user/{name}/{id}', fn($name, $id) => 'Welcome ' .$name. ' Your ID is ' .$id);
 $router->get('hello', fn() => 'Go Luv urself');

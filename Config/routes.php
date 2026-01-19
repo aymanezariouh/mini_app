@@ -46,4 +46,5 @@ $router->get('users/new', [UserController::class, 'showCreateForm']);
 $router->post('users/store', [UserController::class, 'store']);
 
 $router->get('index', [AuthController::class, 'index']);
+$router->get("test",[UserController::class ,"tests"]);
 $router->dispatch();

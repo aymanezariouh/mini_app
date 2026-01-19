@@ -70,4 +70,7 @@ public function store()
         exit;
     }
 }
+public function tests(){
+    echo $this->renders('test');
+}
 }
